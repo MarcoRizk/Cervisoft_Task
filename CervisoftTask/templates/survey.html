@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+
+{% block body %}
+     <h1>Survey Form</h1>
+     <form action="" method="post" name="simple" enctype="multipart/form-data">
+         {{ form.csrf_token }}
+         <p>
+             Full Name:
+             {{form.full_name}}
+         </p>
+         <p>
+             Choice
+             {{form.choice}}
+         </p>
+
+         <p><input type="submit" value="Submit"></p>
+     </form>
+     {% endblock %}
